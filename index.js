@@ -15,7 +15,7 @@ app.use(express.json());
 
 async function connect () {
     try {
-        await mongoose.connect(process.env.MONGO_URL);
+        await mongoose.connect(`mongodb+srv://${process.env.MONGO_URL}@cluster0.2asnclx.mongodb.net/?retryWrites=true&w=majority`);
         console.log("Connected to MongoDB");
     } catch (error) {
         console.log("MongoDB error");
@@ -91,6 +91,16 @@ app.post("/auth",async(req,res)=>{
     res.json({message:'error precossing authentication'});
 }
 })
+
+
+//get link
+
+app.get
+
+
+
+
+
 
 //get user data route
 
